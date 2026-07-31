@@ -1,0 +1,140 @@
+/* Basic page reset and modern font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+/* Center the main application container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Style the textarea */
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* Style the depth selector */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the main action button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* A utility class to easily hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* Style the friendly error box */
+.error-box {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+    border: 1px solid #f87171;
+}
+
+/* Style the loading area */
+.loading-box {
+    text-align: center;
+    margin-top: 2rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* The top dashboard showing the score and rounds */
+.metrics-dashboard {
+    display: flex;
+    justify-content: space-between;
+    background: #eef2f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+/* The rendered report area */
+.report-box {
+    background: #fafafa;
+    padding: 1.5rem;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+/* The source cards container */
+.sources-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Individual source cards */
+.source-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.source-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.source-url {
+    color: #3498db;
+    word-break: break-all;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.source-url:hover {
+    text-decoration: underline;
+}

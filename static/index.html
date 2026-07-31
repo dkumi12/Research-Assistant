@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research Assistant</title>
+    <!-- Link to our stylesheet for a clean, modern look -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Research Assistant</h1>
+        
+        <!-- REQUIREMENT: Research-question textarea -->
+        <textarea id="question-input" placeholder="What would you like me to research? (Minimum 10 characters)"></textarea>
+        
+        <!-- REQUIREMENT: Brief, standard, or deep report selector -->
+        <select id="depth-selector">
+            <option value="brief">Brief</option>
+            <option value="standard">Standard</option>
+            <option value="deep">Deep</option>
+        </select>
+        
+        <!-- REQUIREMENT: Research button -->
+        <button id="search-btn">Run Research</button>
+        
+        <!-- REQUIREMENT: Friendly error state (Hidden by default) -->
+        <div id="error-box" class="hidden error-box"></div>
+
+        <!-- REQUIREMENT: Loading state and Progress labels (Hidden by default) -->
+        <div id="loading-box" class="hidden loading-box">
+            <div class="spinner"></div>
+            <!-- This text will cycle through: planning, searching, evaluating, writing -->
+            <p id="progress-text">Planning...</p>
+        </div>
+
+        <!-- The Final Output Container (Hidden by default) -->
+        <div id="results-box" class="hidden">
+            
+            <!-- REQUIREMENT: Evidence score and number of search rounds -->
+            <div class="metrics-dashboard">
+                <div class="metric">Evidence Quality: <span id="score-display">0</span>/100</div>
+                <div class="metric">Search Rounds: <span id="rounds-display">0</span></div>
+            </div>
+            
+            <!-- REQUIREMENT: Rendered report area -->
+            <h2>Research Report</h2>
+            <div id="report-content" class="report-box"></div>
+            
+            <!-- REQUIREMENT: Source cards with titles and clickable URLs -->
+            <h2>Citations & Sources</h2>
+            <div id="sources-list" class="sources-grid"></div>
+            
+        </div>
+    </div>
+
+    <!-- Link to our interactive logic script -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+langchain
+langgraph
+langchain-openai
+langchain-openrouter
+langchain-tavily
+pydantic
+pydantic-settings
+python-dotenv
+httpx
+pytest
